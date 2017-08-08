@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Task Manager DB Tester</title>
+	</head>
+
+	<body>
+
+		<h1>Database TaskManager</h1>
+
+		<h2>Read all tasks:</h2>
+		<form action="task_test.php" method="GET">
+			<input type="hidden" name="read_all" value="read_all" />
+			<input type="submit" value="Read Tasks" />
+		</form>
+
+		<h2>Read a task:</h2>
+		<form action="task_test.php" method="GET">
+			<label>Task ID:</label>
+			<input type="number" min="1" name="id"/>
+			<input type="submit" value="Read Task"/>
+		</form>
+
+		<h2>Add a task:</h2>
+		<form action="task_test.php" method="POST">
+			<label>Task Description:</label>
+			<input type="text" placeholder="Task Description" name="desc"/>
+			<input type="submit" value="Add Task" />
+		</form>
+
+		<h2>Update a task:</h2>
+		<form action="task_test.php" method="POST">
+			<input type="number" min="1" name="up_id"/>
+			<input type="text" name="up_desc" />
+			<input type="submit" value="Update Task" />
+		</form>
+
+		<h2>Delete a task:</h2>
+		<form action="task_test.php" method="POST">
+			<label>Task ID:</label>
+			<input type="number" min="1" name="del_id"/>
+			<input type="submit" value="Delete Task" />
+		</form>
+
+	</body>
+</html>
